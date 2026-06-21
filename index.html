@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óptica - Citas y Promociones</title>
+  
+  <style>
+    :root {
+      --primary: #1a365d; /* Azul formal y médico */
+      --secondary: #2b6cb0; /* Azul claro para acentos */
+      --accent: #d69e2e; /* Dorado/Amarillo para botones de acción */
+      --bg: #f7fafc;
+      --text: #2d3748;
+    }
+
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    
+    /* Contenedor Principal */
+    .container { max-width: 600px; margin: 0 auto; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); box-sizing: border-box; }
+    
+    /* Encabezado */
+    header { background-color: var(--primary); color: white; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 24px; letter-spacing: 1px; }
+    header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.8; }
+    
+    /* Sección Banner Dinámico de Drive */
+    .banner-container { width: 100%; background-color: #e2e8f0; line-height: 0; overflow: hidden; position: relative; }
+    .banner-img { width: 100%; height: auto; display: block; min-height: 150px; object-fit: cover; }
+    
+    /* Cuerpo de la página */
+    .content { padding: 20px; }
+    
+    h2 { color: var(--primary); font-size: 20px; border-bottom: 2px solid #edf2f7; padding-bottom: 8px; margin-top: 10px; }
+    
+    /* Servicios */
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
+    .service-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; text-align: center; }
+    .service-icon { font-size: 24px; margin-bottom: 4px; }
+    .service-card h3 { margin: 0; font-size: 14px; color: var(--primary); }
+    .service-card p { margin: 4px 0 0 0; font-size: 11px; color: #718096; line-height: 1.2; }
+    
+    /* Formulario Estilizado */
+    .form-group { margin-bottom: 15px; text-align: left; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px; color: #4a5568; }
+    input, select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; box-sizing: border-box; transition: 0.3s; }
+    input:focus, select:focus { border-color: var(--secondary); outline: none; background-color: #f8fafc; }
+    
+    .dateTime-row { display: flex; gap: 10px; }
+    .dateTime-row .form-group { flex: 1; margin-bottom: 0; }
+    
+    /* Botón WhatsApp */
+    .btn-wsp { width: 100%; background-color: #25d366; color: white; padding: 14px; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; text-transform: uppercase; box-sizing: border-box; margin-top: 10px; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); transition: 0.3s; }
+    .btn-wsp:hover { background-color: #20ba56; }
+    
+    /* Footer / Info de la Óptica */
+    footer { background: #1a202c; color: white; padding: 20px; text-align: center; font-size: 13px; margin-top: 30px; }
+    footer p { margin: 6px 0; opacity: 0.8; }
+    .footer-highlight { color: #ebf8ff; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1>👓 ÓPTICA VISIÓN</h1>
+      <p>Salud visual a tu alcance</p>
+    </header>
+
+    <div class="banner-container">
+      <img id="promo-banner" src="https://drive.google.com/thumbnail?authuser=0&sz=w1000&id=1bG8RGty1ZCZdblBIDkZ5dKQcf8TErwfT" alt="Promoción del Mes" class="banner-img">
+    </div>
+
+    <div class="content">
+      
+      <h2>Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">👁️</div>
+          <h3>Examen de la Vista</h3>
+          <p>Evaluación computarizada y clínica profesional.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👓</div>
+          <h3>Armazones y Micas</h3>
+          <p>Monofocales, Progresivos y Antirreflejante.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">☀️</div>
+          <h3>Lentes de Sol</h3>
+          <p>Protección UV graduada con las mejores marcas.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧪</div>
+          <h3>Lentes de Contacto</h3>
+          <p>Adaptación, soluciones y lentes estéticos o graduados.</p>
+        </div>
+      </div>
+
+      <h2>Agendar Cita</h2>
+      <p style="font-size: 13px; color: #718096; margin-top: -8px; margin-bottom: 15px;">Completa tus datos y envíalos para confirmar disponibilidad en nuestra agenda por WhatsApp.</p>
+      
+      <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+      </div>
+
+      <div class="form-group">
+        <label for="motivo">Servicio de interés:</label>
+        <select id="motivo">
+          <option value="Examen de la vista completo">👁️ Examen de la Vista Gratis/Completo</option>
+          <option value="Cotización/Compra de Lentes">👓 Ver Armazones / Comprar Lentes</option>
+          <option value="Ajuste o Reparación">🛠️ Mantenimiento o Reparación</option>
+          <option value="Lentes de Contacto">🧪 Consulta para Lentes de Contacto</option>
+        </select>
+      </div>
+
+      <div class="dateTime-row">
+        <div class="form-group">
+          <label for="fecha">Fecha deseada:</label>
+          <input type="date" id="fecha">
+        </div>
+        <div class="form-group">
+          <label for="hora">Hora deseada:</label>
+          <input type="time" id="hora">
+        </div>
+      </div>
+
+      <button class="btn-wsp" onclick="enviarCitaWhatsApp()">
+        <svg style="width:20px; height:20px; fill:currentColor;" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.516 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.448 4.795 1.449 5.514 0 9.997-4.482 10.001-9.999.002-2.673-1.033-5.186-2.918-7.072C16.541 1.647 14.03 0 11.371 0 5.856 0 1.374 4.482 1.37 9.999c-.001 1.557.462 3.111 1.378 4.542l-.994 3.63 3.733-.979zm11.385-4.636c-.13-.217-.477-.348-.997-.607-.518-.258-3.07-1.514-3.546-1.687-.477-.173-.823-.258-1.17.258-.347.516-1.343 1.687-1.647 2.031-.303.344-.606.387-1.126.129-.519-.258-2.193-.807-4.177-2.577-1.541-1.375-2.583-3.073-2.886-3.59-.303-.517-.032-.796.227-1.054.232-.233.52-.603.779-.903.259-.301.346-.516.519-.86.173-.344.086-.646-.043-.905-.129-.258-1.17-2.818-1.602-3.861-.421-1.013-.849-.877-1.17-.893-.303-.016-.65-.016-.995-.016-.347 0-.909.13-1.385.646-.476.516-1.819 1.774-1.819 4.328 0 2.553 1.861 5.013 2.121 5.358.259.344 3.662 5.592 9.011 7.683 1.272.497 2.264.793 3.037 1.038 1.279.407 2.444.349 3.363.212 1.025-.154 3.07-1.253 3.502-2.464.433-1.211.433-2.251.303-2.466z"/></svg>
+        Enviar datos por WhatsApp
+      </button>
+
+    </div>
+
+    <footer>
+      <p class="footer-highlight">📍 UBICACIÓN</p>
+      <p>Calle Principal #123, Colonia Centro, Ciudad</p>
+      <p style="font-size: 11px; opacity: 0.6;">(Frente al parque principal)</p>
+      
+      <p class="footer-highlight" style="margin-top: 15px;">⏰ HORARIOS</p>
+      <p>Lunes a Viernes: 10:00 AM - 7:30 PM</p>
+      <p>Sábados: 10:00 AM - 4:00 PM</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Configura aquí el número de WhatsApp de la Óptica (con código de país, sin espacios ni el signo +)
+    // Ejemplo: 52 para México + 10 dígitos = 529991234567
+    const TELEFONO_OPTICA = "529991234567"; 
+
+    function enviarCitaWhatsApp() {
+      var nombre = document.getElementById('nombre').value.trim();
+      var motivo = document.getElementById('motivo').value;
+      var fecha = document.getElementById('fecha').value;
+      var hora = document.getElementById('hora').value;
+
+      if (nombre === "") {
+        alert("Por favor, escribe tu nombre.");
+        return;
+      }
+      if (fecha === "" || hora === "") {
+        alert("Por favor, selecciona una fecha y hora para tu cita.");
+        return;
+      }
+
+      // Dar formato legible a la fecha (AAAA-MM-DD a DD/MM/AAAA)
+      var fechaFormateada = fecha.split('-').reverse().join('/');
+
+      // Construcción del mensaje para WhatsApp
+      var textoMensaje = "👓 *SOLICITUD DE CITA - ÓPTICA*\n\n" +
+                         "👤 *Nombre:* " + nombre + "\n" +
+                         "🎯 *Motivo:* " + motivo + "\n" +
+                         "📅 *Fecha:* " + fechaFormateada + "\n" +
+                         "⏰ *Hora:* " + hora + " hrs\n\n" +
+                         "_Quedo atento a su confirmación de disponibilidad en su agenda._";
+
+      // Crear URL de WhatsApp
+      var urlWsp = "https://api.whatsapp.com/send?phone=" + TELEFONO_OPTICA + "&text=" + encodeURIComponent(textoMensaje);
+      
+      // Abrir en una pestaña nueva
+      window.open(urlWsp, '_blank');
+    }
+  </script>
+</body>
+</html>
